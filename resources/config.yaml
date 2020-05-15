@@ -1,0 +1,8 @@
+jenkins:
+  userid: Jenkins-connection
+
+git:
+  credentials: github-connection
+  project:
+    url: https://github.com/
+  
