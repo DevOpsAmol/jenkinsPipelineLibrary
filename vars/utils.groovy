@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
 
-def getConfig() {
-    def configContent = libraryResource 'config.yaml'
-    def config = readYaml text: configContent
-    return config
-}
+//def getConfig() {
+//    def configContent = libraryResource 'config.yaml'
+//    def config = readYaml text: configContent
+//    return config
+//}
 
 
 //This needs to be removed worked out 
