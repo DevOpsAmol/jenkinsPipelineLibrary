@@ -7,7 +7,7 @@
 def call(Map params) {
 
     //def config = getConfig()
-    def giturl = "${config.git.project.url}${params.project}/${params.repository}.git"
+    def giturl = "https://github.com/${params.project}/${params.repository}.git"
 	def credentialsId = "github-connection"
 
   
