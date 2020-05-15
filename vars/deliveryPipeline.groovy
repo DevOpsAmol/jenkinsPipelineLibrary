@@ -8,14 +8,7 @@ def call(String type, Closure body) {
     body.delegate = pipelineParams
     body()
 	
-    environment {
-	  dockerHome = tool 'CICDdocker'
-	  mavenHome = tool 'maven'
-	  sonarHome = tool 'DevOpsSonar'
-	  PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
-	}
-     
-	def isFeatureBranch = utils.isFeatureBranch(env.BRANCH_NAME)
+    def isFeatureBranch = utils.isFeatureBranch(env.BRANCH_NAME)
     def isDevelopBranch = utils.isDevelopBranch(env.BRANCH_NAME)
     def isMasterBranch = utils.isMasterBranch(env.BRANCH_NAME)
     
