@@ -170,30 +170,30 @@ def call(String type, Closure body) {
           }
         }
 		
-		if(env.BRANCH_NAME == 'develop') {
-            stage('Promote all') {
-                parallel(
-                    'Promote DEV': {
-                        //implement deployment through jenkins pipeline
-                    },
-                    'Promote INT': {
-                        //implement deployment through jenkins pipeline
-                    }
-                )
-                if(!pipelineParams.loadTests) {
-                    //Since we didn't run performance tests we promote prf additionally
-                    stage('Promote PRF') {
-                        //implement deployment through jenkins pipeline
-                    }
-                }
-            }
-        } 
+//		if(env.BRANCH_NAME == 'develop') {
+//            stage('Promote all') {
+//                parallel(
+//                    'Promote DEV': {
+  //                      //implement deployment through jenkins pipeline
+   //                 },
+    //                'Promote INT': {
+    //                    //implement deployment through jenkins pipeline
+    //                }
+    //            )
+    //            if(!pipelineParams.loadTests) {
+    //                //Since we didn't run performance tests we promote prf additionally
+     //               stage('Promote PRF') {
+     //                   //implement deployment through jenkins pipeline
+     //               }
+     //           }
+     //       }
+     //   } 
       
-      if(env.BRANCH_NAME == 'master') {
-            stage('Promote UAT') {
-                //Add code to promote to UAT
-            }
-        }
+   //   if(env.BRANCH_NAME == 'master') {
+   //         stage('Promote UAT') {
+   //             //Add code to promote to UAT
+   //         }
+   //     }
 
        
 // written tomcatDeploy library for deployments to tomcat, this needs to be revisited.
