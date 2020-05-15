@@ -13,12 +13,12 @@ def getProjectVersion(pomFilePath) {
  return pom.version
 } 
 
-def getReleaseVersion(scmProject, scmRepository) {
-    def config = getConfig()
-    git credentialsId: "${config.jenkins.userid}", url: "https://github.com/${scmProject}/${scmRepository}.git" , branch: 'master'
-    pom = readMavenPom file: 'pom.xml'
-    return pom.version
-}
+//def getReleaseVersion(scmProject, scmRepository) {
+//    def config = getConfig()
+//    git credentialsId: "${config.jenkins.userid}", url: "https://github.com/${scmProject}/${scmRepository}.git" , branch: 'master'
+//    pom = readMavenPom file: 'pom.xml'
+//    return pom.version
+//}
 
 def isUpstream(){
     def upsteam = false
