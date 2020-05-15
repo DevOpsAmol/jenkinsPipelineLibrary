@@ -1,20 +1,7 @@
 #!/usr/bin/env groovy
 
 
-/**
- *  Usage:
- *  processTemplate template: 'docker-compose.yml', binding: [key:value], output: docker-compose.env.yml
-
-//def getConfig() {
-//    def configContent = libraryResource 'config.yaml'
-//    def config = readYaml text: configContent
-//    return config
-//}
- */
-
-
 //This needs to be removed worked out 
-
 
 //def getProjectVersion() {
 //    pom = readMavenPom file: 'pom.xml'
@@ -25,7 +12,6 @@ def getProjectVersion(pomFilePath) {
  pom = readMavenPom file: "${pomFilePath}"
  return pom.version
 } 
-
 
 def getReleaseVersion(scmProject, scmRepository) {
     def config = getConfig()
