@@ -7,6 +7,13 @@ def call(String type, Closure body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = pipelineParams
     body()
+	
+    environment {
+	  dockerHome = tool 'CICDdocker'
+	  mavenHome = tool 'maven'
+	  sonarHome = tool 'DevOpsSonar'
+	  PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	}
      
 	def isFeatureBranch = utils.isFeatureBranch(env.BRANCH_NAME)
     def isDevelopBranch = utils.isDevelopBranch(env.BRANCH_NAME)
