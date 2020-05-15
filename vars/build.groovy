@@ -12,9 +12,9 @@ def call(Map params) {
   // def version = utils.getProjectVersion()
 
     // Check if right version of pom is on master branch
-    if(env.BRANCH_NAME == 'master' && version.contains('SNAPSHOT')) {
-        error('Release version cannot be SNAPSHOT')
-    }
+  //  if(env.BRANCH_NAME == 'master' && version.contains('SNAPSHOT')) {
+    //    error('Release version cannot be SNAPSHOT')
+    //}
 
     // Run the maven build
     sh "${params.command}"
