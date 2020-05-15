@@ -6,9 +6,9 @@
  */
 def call(Map params) {
 
-    def config = getConfig()
+    //def config = getConfig()
     def giturl = "${config.git.project.url}${params.project}/${params.repository}.git"
-	def credentialsId = config.git.credentials
+	def credentialsId = "git.connection"
 
   
     // Get project code from a Git repository
