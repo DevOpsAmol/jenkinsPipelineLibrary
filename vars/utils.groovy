@@ -23,7 +23,7 @@ def getProjectVersion(pomFilePath) {
 
 def getReleaseVersion(scmProject, scmRepository) {
     def config = getConfig()
-    git credentialsId: "${config.jenkins.userid}", url: "${config.git.project.url}${scmProject}/${scmRepository}.git" , branch: 'master'
+    git credentialsId: "${config.jenkins.userid}", url: "https://github.com/${scmProject}/${scmRepository}.git" , branch: 'master'
     pom = readMavenPom file: 'pom.xml'
     return pom.version
 }
