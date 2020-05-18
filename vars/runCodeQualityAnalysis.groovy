@@ -6,7 +6,7 @@
  */
 def call(Map params) {
     // Run the sonar scan
-    withSonarQubeEnv('Environment name for Sonar') {
+    withSonarQubeEnv('SonarServer') {
         sh params.command
     }
 
